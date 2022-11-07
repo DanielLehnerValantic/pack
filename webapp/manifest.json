@@ -17,7 +17,7 @@
     },
     "dataSources": {
       "mainService": {
-        "uri": "/sap/opu/odata/",
+        "uri": "https://cors-anywhere.herokuapp.com/https://services.odata.org/V2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
           "annotations": [],
@@ -44,7 +44,7 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": true,
+    "flexEnabled": false,
     "dependencies": {
       "minUI5Version": "1.102.1",
       "libs": {
@@ -99,6 +99,13 @@
           "target": [
             "TargetMain"
           ]
+        },
+        {
+          "name": "detail",
+          "pattern": "detail",
+          "target": [
+              "TargetDetail"
+          ]
         }
       ],
       "targets": {
@@ -108,7 +115,14 @@
           "clearControlAggregation": false,
           "viewId": "Main",
           "viewName": "Main"
-        }
+        },
+        "TargetDetail": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Detail",
+          "viewName": "Detail"
+      }
       }
     },
     "rootView": {

@@ -1,7 +1,49 @@
-<mvc:View controllerName="com.valantic.pack.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
-    </Page>
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.valantic.pack.controller.Main" displayBlock="true" xmlns:core="sap.ui.core">
+    <App id="app0">
+        <sap.m.semantic:FullscreenPage xmlns:sap.m.semantic="sap.m.semantic" title="Semantic Page" id="page2" backgroundDesign="Solid" showNavButton="true" floatingFooter="true" showFooter="false">
+            <sap.m.semantic:content>
+                <FlexBox width="100%" id="box0" alignItems="Center" alignContent="Center" justifyContent="Center" class="sapUiMediumMarginTop">
+                    <items>
+                        <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form3">
+                            <sap.ui.layout.form:content>
+                                <Label xmlns="sap.m" text="Work Center" id="label2"/>
+                                <Input
+                                    xmlns="sap.m"
+                                    width="100%"
+                                    id="workCenter"
+                                    showSuggestion="true"
+                                    suggestionItems="{/Suppliers}"
+                                    showValueHelp="true"
+                                    valueHelpRequest="onValueHelpRequest">
+                                    <suggestionItems>
+                                        <core:Item text="{Arbeitsplatz}" />
+                                    </suggestionItems>
+                                </Input>
+                                <Label xmlns="sap.m" text="Storage Bin" id="label3"/>
+                                <Input
+                                    xmlns="sap.m"
+                                    width="100%"
+                                    id="storageBin"
+                                    showSuggestion="true"
+                                    suggestionItems="{/Suppliers}"
+                                    showValueHelp="true">
+                                    <suggestionItems>
+                                        <core:Item text="{Arbeitsplatz}" />
+                                    </suggestionItems>
+                                </Input>
+                                <Label xmlns="sap.m" text="Packing Mode" id="label4"/>
+                                <Input
+                                    xmlns="sap.m"
+                                    width="100%"
+                                    id="packingMode"
+                                    showSuggestion="true"
+                                    showValueHelp="true"/>
+                                <Button xmlns="sap.m" text="Start Packing" id="button0" class="sapUiSmallMarginTop" press="goToDetailPage"/>
+                            </sap.ui.layout.form:content>
+                        </sap.ui.layout.form:SimpleForm>
+                    </items>
+                </FlexBox>
+            </sap.m.semantic:content>
+        </sap.m.semantic:FullscreenPage>
+    </App>
 </mvc:View>

@@ -1,0 +1,18 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+	<SelectDialog
+		id="workCenterVH"
+		title="test"
+		search=".onValueHelpSearch"
+		confirm=".onValueHelpClose"
+		cancel=".onValueHelpClose"
+		showClearButton="true"
+		items="{/Suppliers}">
+			<StandardListItem
+				title="{Arbeitsplatz}"
+				description="{Packarbeitsplatz}"
+			/>
+	</SelectDialog>
+</c:FragmentDefinition>
